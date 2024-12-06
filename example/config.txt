@@ -1,0 +1,2 @@
+Prefix plugins/PlotEnrichment/example/
+Plugin PlotEnrichment inputfile parameters.plotenrichment.class.txt outputfile Class.pdf
