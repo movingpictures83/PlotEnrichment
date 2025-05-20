@@ -22,6 +22,7 @@ output <- function(outputfile) {
 	pdf(outputfile)
    de_results <- readRDS(paste(pfix, parameters["de", 2], sep="/"))
    enrich_results <- readRDS(paste(pfix, parameters["en", 2], sep="/"))
-plot_enrichment(de_results, significant_lipidsets(enrich_results), annotation=parameters["an", 2])
+   write.csv(de_results$B, paste(outputfile, "csv", sep="."))
+   plot_enrichment(de_results, significant_lipidsets(enrich_results), annotation=parameters["an", 2])
 
 }
